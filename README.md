@@ -55,11 +55,11 @@
  - [x] Return token as cookie
  - [x] Autologin on register
 7. Logout
- - [ ] Add get logout action
+ - [x] Add get logout action
 8. Authentication
- - [ ] Add cookie parser `npm i cookie-parser`
- - [ ] Add cookie parser middleware
- - [ ] Add auth middleware 
+ - [x] Add cookie parser `npm i cookie-parser`
+ - [x] Add cookie parser middleware
+ - [x] Add auth middleware 
  - [ ] Check if guest
  - [ ] Token verification
  - [ ] Attach user to request

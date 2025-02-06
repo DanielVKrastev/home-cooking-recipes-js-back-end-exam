@@ -1,8 +1,10 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
+import cookieParser from 'cookie-parser';
 
 import routes from './routes.js';
 import mongoose from 'mongoose';
+import { auth } from './middlewares/auth-middleware.js';
 
 const app = express();
 
@@ -36,6 +38,8 @@ app.set('views', 'src/views');
 // Express Setup
 app.use(express.static('src/public'));
 app.use(express.urlencoded({extended: false}));
+app.use(cookieParser());
+app.use(auth);
 app.use(routes);
 
 // Start Express
