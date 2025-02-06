@@ -60,13 +60,13 @@
  - [x] Add cookie parser `npm i cookie-parser`
  - [x] Add cookie parser middleware
  - [x] Add auth middleware 
- - [ ] Check if guest
- - [ ] Token verification
- - [ ] Attach user to request
- - [ ] Attach user to handlebars context
+ - [x] Check if guest
+ - [x] Token verification
+ - [x] Attach user to request
+ - [x] Attach user to handlebars context
 9.  Authorization
- - [ ] Add isAuth middleware
- - [ ] Add route guards authorization
+ - [x] Add isAuth middleware
+ - [x] Add route guards authorization
 10. Error Handling
  - [ ] Add notifications
  - [ ] Extract error message
