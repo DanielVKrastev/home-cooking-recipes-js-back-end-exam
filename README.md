@@ -68,10 +68,10 @@
  - [x] Add isAuth middleware
  - [x] Add route guards authorization
 10. Error Handling
- - [ ] Add notifications
- - [ ] Extract error message
- - [ ] Add error handling for register
- - [ ] Add error handling for login
+ - [x] Add notifications
+ - [x]Extract error message
+ - [x] Add error handling for register
+ - [x] Add error handling for login
 11. Bonus
  - [ ] Dynamic Navigation
  - [ ] Dynamic Titles

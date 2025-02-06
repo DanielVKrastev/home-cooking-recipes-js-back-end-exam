@@ -2,6 +2,7 @@ import { Router } from "express";
 import authService from "../services/auth-service.js";
 import { AUTH_COOKIE_NAME } from "../constants-config.js";
 import { isAuth } from "../middlewares/auth-middleware.js";
+import { getErrorMessage } from "../utils/error-unitls.js";
 
 const authController = Router();
 
@@ -17,7 +18,8 @@ authController.post('/register', async (req, res) => {
         res.cookie(AUTH_COOKIE_NAME, token, { expiresIn: '2h', httpOnly: true });
         res.redirect('/');
     }catch(err){
-
+        const error = getErrorMessage(err);
+        res.render('auth/register', { error, user: userData });
     }
 })
 
@@ -33,7 +35,8 @@ authController.post('/login', async (req, res) => {
         res.cookie(AUTH_COOKIE_NAME, token, { expiresIn: '2h', httpOnly: true });
         res.redirect('/');
     }catch(err){
-        
+        const error = getErrorMessage(err);
+        res.render('auth/login', { error, user: { email } });
     }
 });
 
