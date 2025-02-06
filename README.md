@@ -44,16 +44,16 @@
  - [x] Check if user exists
 6. Login
  - [x] Add jsonwebtoken `npm i jsonwebtoken`
- - [ ] Add login view
- - [ ] Add get login action
- - [ ] Fix login form
- - [ ] Add post login action
- - [ ] Add login to authService
- - [ ] Validate user
- - [ ] Validate password
- - [ ] Generate token
- - [ ] Return token as cookie
- - [ ] Autologin on register
+ - [x] Add login view
+ - [x] Add get login action
+ - [x] Fix login form
+ - [x] Add post login action
+ - [x] Add login to authService
+ - [x] Validate user
+ - [x] Validate password
+ - [x] Generate token
+ - [x] Return token as cookie
+ - [x] Autologin on register
 7. Logout
  - [ ] Add get logout action
 8. Authentication

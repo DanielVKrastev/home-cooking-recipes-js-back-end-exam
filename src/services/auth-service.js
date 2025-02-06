@@ -1,3 +1,5 @@
+import bcrypt from 'bcrypt';
+
 import User from '../models/user-model.js';
 import { generateToken } from '../utils/auth-unils.js';
 
@@ -18,6 +20,20 @@ export default {
         const createdUser = await User.create(userData);
 
         const token = generateToken(createdUser);
+        return token;
+    },
+    async login(email, password){
+        const user = await User.findOne({email});
+        if(! user){
+            throw new Error('Invalid email');
+        }
+
+        const isValid = await bcrypt.compare(password, user.password);
+        if(! isValid){
+            throw new Error('Invalid email');
+        }
+
+        const token = generateToken(user);
         return token;
     },
 }
