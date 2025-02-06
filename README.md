@@ -10,8 +10,8 @@
  - [x] Add start script
  - [x] Setup debugging
 2. Express
- - [ ] Install `npm i express`
- - [ ] Setup inital http server
+ - [x] Install `npm i express`
+ - [x] Setup inital http server
  - [ ] Add public resources (images, css...)
  - [ ] Add static middleware
  - [ ] Add body parser
