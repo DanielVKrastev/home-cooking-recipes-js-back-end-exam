@@ -31,19 +31,19 @@
  - [x] Setup db connection
  - [x] Add user model
 5. Register
- - [ ] Install bcrypt `npm i bcrypt`
- - [ ] Fix navigation links
- - [ ] Add register view
- - [ ] Add authController
- - [ ] Add register page
- - [ ] Fix register form
- - [ ] Add post register action
- - [ ] Add authService with register
- - [ ] Hash password
- - [ ] Check confirmPassword
- - [ ] Check if user exists
+ - [x] Install bcrypt `npm i bcrypt`
+ - [x] Fix navigation links
+ - [x] Add register view
+ - [x] Add authController
+ - [x] Add register page
+ - [x] Fix register form
+ - [x] Add post register action
+ - [x] Add authService with register
+ - [x] Hash password
+ - [x] Check confirmPassword
+ - [x] Check if user exists
 6. Login
- - [ ] Add jsonwebtoken `npm i jsonwebtoken`
+ - [x] Add jsonwebtoken `npm i jsonwebtoken`
  - [ ] Add login view
  - [ ] Add get login action
  - [ ] Fix login form
