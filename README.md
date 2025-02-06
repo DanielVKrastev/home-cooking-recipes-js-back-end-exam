@@ -73,10 +73,10 @@
  - [x] Add error handling for register
  - [x] Add error handling for login
 11. Bonus
- - [ ] Dynamic Navigation
- - [ ] Dynamic Titles
- - [ ] Set titles from view
- - [ ] Async jsonwebtoken
+ - [x] Dynamic Navigation
+ - [x] Dynamic Titles
+ - [x] Set titles from view
+ - [x] Async jsonwebtoken
  - [ ] Add types for jsonwebtoken lib
 12. TempData | Optional
  - [ ] Install express session `npm i express-session`
