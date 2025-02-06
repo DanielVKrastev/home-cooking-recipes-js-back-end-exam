@@ -8,7 +8,7 @@ const userScema = new Schema({
         required: true,
         minLength: 10,
     },
-    name: {
+    username: {
         type: String,
         required: true,
         minLength: 2,
