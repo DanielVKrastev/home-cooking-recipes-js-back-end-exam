@@ -17,7 +17,7 @@ app.engine('hbs', handlebars.engine({
         }
     },
     runtimeOptions: {
-        allowProtoMethodsByDefault: true,
+        allowProtoPropertiesByDefault: true,
     },
 }));
 
