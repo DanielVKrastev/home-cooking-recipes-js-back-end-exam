@@ -9,6 +9,10 @@ export default {
         const recipes = await Recipe.find({});
         return recipes;
     },
+    async getNewThree(){
+        const recipes = await Recipe.find({}).sort({ field: 'asc', _id: -1 }).limit(3)
+        return recipes;
+    },
     async getOne(recipeId){
         const recipe = await Recipe.findById(recipeId);
         return recipe;
