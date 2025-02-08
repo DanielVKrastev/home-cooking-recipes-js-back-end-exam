@@ -9,4 +9,8 @@ export default {
         const recipes = await Recipe.find({});
         return recipes;
     },
+    async getOne(recipeId){
+        const recipe = await Recipe.findById(recipeId);
+        return recipe;
+    }
 }

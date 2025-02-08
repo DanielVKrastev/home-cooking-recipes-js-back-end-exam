@@ -30,4 +30,14 @@ recipesController.get('/catalog', async (req, res) => {
     res.render('recipe/catalog', { recipes: recipes });
 });
 
+recipesController.get('/:recipeId/details', async(req, res) => {
+    const recipeId = req.params.recipeId;
+    const user = res.locals.user;    
+    const recipe = await recipeService.getOne(recipeId);
+    
+    // TODO: is owner?
+    
+    res.render('recipe/details', { recipe: recipe, user });
+});
+
 export default recipesController;
