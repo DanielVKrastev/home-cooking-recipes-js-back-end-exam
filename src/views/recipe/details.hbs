@@ -21,10 +21,12 @@
 
 {{#if user}}
 <div class="command">
+    {{#if isOwner}}
     <a href="#">Edit</a>
     <a href="#">Delete</a>
-
+    {{else}}
     <a href="#">Recommend</a>
     <p>You've already recommended this recipe!</p>
+    {{/if}}
 {{/if}}
 </div>

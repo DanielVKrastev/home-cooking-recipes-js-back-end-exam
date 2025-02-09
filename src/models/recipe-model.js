@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, Types } from "mongoose";
 
 const recipeSchema = new Schema({
     title: {
@@ -27,6 +27,10 @@ const recipeSchema = new Schema({
         type: String,
         required: true,
         match: /https?:\/\//,
+    },
+    owner: {
+        type: Types.ObjectId,
+        ref: 'User',
     },
 });
 
