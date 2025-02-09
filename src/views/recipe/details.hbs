@@ -16,7 +16,7 @@
 
     <h3>-----------------------------------------------------</h3>
 
-        <h3>People Who Recommend: 0</h3>
+        <h3>People Who Recommend: {{recommendCount}}</h3>
 </article>
 
 {{#if user}}
@@ -25,8 +25,11 @@
     <a href="#">Edit</a>
     <a href="#">Delete</a>
     {{else}}
-    <a href="#">Recommend</a>
-    <p>You've already recommended this recipe!</p>
+        {{#if recommendedUser}}
+        <p>You've already recommended this recipe!</p>
+        {{else}}
+        <a href="/recipe/{{recipe._id}}/recommend">Recommend</a>
+        {{/if}}
     {{/if}}
 {{/if}}
 </div>

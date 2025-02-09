@@ -32,6 +32,10 @@ const recipeSchema = new Schema({
         type: Types.ObjectId,
         ref: 'User',
     },
+    recommend: [{
+        type: Types.ObjectId,
+        ref: 'User',
+    }],
 });
 
 const Recipe = model('Recipe', recipeSchema);

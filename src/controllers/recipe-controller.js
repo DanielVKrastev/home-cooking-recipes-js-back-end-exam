@@ -37,14 +37,30 @@ recipesController.get('/:recipeId/details', async(req, res) => {
     const user = res.locals.user;    
     const recipe = await recipeService.getOne(recipeId);
     
+    // Check the user is Owner
+    const userId = user.id;
     let isOwner = false;
-    if(user.id == recipe.owner){
+    if(userId == recipe.owner){
         isOwner = true;
     }
-    console.log(isOwner);
     
+    // Check the user if is recommened
+    const recommendedUser = await recipeService.checkRecommend(recipeId, userId);
+
+    // Count recommends
+    const recommendCount = recipe.recommend.length;
     
-    res.render('recipe/details', { recipe, user, isOwner });
+    res.render('recipe/details', { recipe, user, isOwner, recommendedUser, recommendCount });
+});
+
+recipesController.get('/:recipeId/recommend', async (req, res) => {
+    const recipeId = req.params.recipeId;
+    const userId = req.user.id;
+
+    await recipeService.recommendToRecipe(recipeId, userId);
+
+    res.redirect(`/recipe/${recipeId}/details`);
+    
 });
 
 export default recipesController;

@@ -16,5 +16,21 @@ export default {
     async getOne(recipeId){
         const recipe = await Recipe.findById(recipeId);
         return recipe;
+    },
+    async recommendToRecipe(recipeId, userId){
+        return Recipe.findByIdAndUpdate(recipeId, {$push: {recommend: userId}});
+    },
+    async checkRecommend(recipeId, userId){
+        const recipe = await this.getOne(recipeId);
+        const recommendArr = recipe.recommend;
+
+        let result = false;
+        recommendArr.forEach(recommendUserId => {
+            if(recommendUserId == userId){
+                result = true;
+            }
+        });
+
+        return result;
     }
 }
